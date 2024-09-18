@@ -13,7 +13,7 @@ router.get("/balance", Auth, async (req, res) => {
         userId: req.userId
     });
 
-   console.log(account)
+
     res.json({
         balance: account.balance
     })
@@ -21,7 +21,7 @@ router.get("/balance", Auth, async (req, res) => {
 
 router.get("/info",Auth,async(req,res)=>{
     const account = await User.findById( req.userId)
-    console.log(account)
+ 
     res.json(account)
 })
 
